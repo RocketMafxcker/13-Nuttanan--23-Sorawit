@@ -13,6 +13,6 @@ public class BulletPlus : SkillUp
 
     public override void ApplySkillUp(Player player)
     {
-       // player.SkillUp(AddBullet);
+       //player.SkillUp(AddBullet);
     }
 }
