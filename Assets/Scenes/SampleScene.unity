@@ -268,10 +268,22 @@ PrefabInstance:
       value: Enemy_1 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1812516559}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 537773500}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1812516559}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 537773500}
@@ -333,10 +345,22 @@ PrefabInstance:
       value: Enemy_1 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1436911975}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1909374436}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1436911975}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 1909374436}
@@ -902,6 +926,31 @@ Transform:
   - {fileID: 686749984}
   m_Father: {fileID: 29191576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &268121171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 978821572608480059, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+  m_PrefabInstance: {fileID: 1229461771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &268121177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268121171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfbebe3527f2514eb01d3cbd7708b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjDrop: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+  health: 0
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  movePoints:
+  - {fileID: 1045773080}
+  - {fileID: 1241580291}
 --- !u!1 &285642619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,10 +3836,22 @@ PrefabInstance:
       value: Enemy_1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1857332974}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 542809921}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1857332974}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 542809921}
@@ -4742,10 +4803,22 @@ PrefabInstance:
       value: Enemy_1 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 690073050}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1696356730}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 690073050}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 1696356730}
@@ -5879,6 +5952,10 @@ PrefabInstance:
       value: Enemy_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1241580291}
@@ -5929,7 +6006,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 978821572608480059, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 268121177}
   m_SourcePrefab: {fileID: 100100000, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
 --- !u!1 &1241580290
 GameObject:
@@ -5975,10 +6055,22 @@ PrefabInstance:
       value: Enemy_1 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1020591831}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 721208995}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1020591831}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 721208995}
@@ -6124,10 +6216,22 @@ PrefabInstance:
       value: Enemy_1 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1900815005}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1887287807}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1900815005}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 1887287807}
@@ -11093,6 +11197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632bf79c151ba7642bb9946948018deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObjDrop: {fileID: 0}
   health: 0
   anim: {fileID: 2035097804}
   rb: {fileID: 2035097808}
@@ -11100,7 +11205,7 @@ MonoBehaviour:
   <BulletSpawnPoint>k__BackingField: {fileID: 899752817}
   <BulletSpawnTime>k__BackingField: 0
   <BulletTimer>k__BackingField: 0
-  <BulletCount>k__BackingField: 0
+  <BulletCount>k__BackingField: 1
 --- !u!1 &2048568423
 GameObject:
   m_ObjectHideFlags: 0
@@ -11343,10 +11448,22 @@ PrefabInstance:
       value: Enemy_1 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 1981736393}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 285642620}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1981736393}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 285642620}
@@ -11497,10 +11614,22 @@ PrefabInstance:
       value: Enemy_1 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: ObjDrop
+      value: 
+      objectReference: {fileID: 3241270866548631462, guid: 2c0f6753595795640a5d3edcc61e5560, type: 3}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 156491745}
     - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 144950185}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 156491745}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 144950185}
@@ -12057,14 +12186,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1
       objectReference: {fileID: 0}
-    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
-      objectReference: {fileID: 65937959}
-    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      objectReference: {fileID: 2137964207}
+    - target: {fileID: 2905148904010895047, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: movePoints.Array.data[1]
       value: 
-      objectReference: {fileID: 2137964207}
+      objectReference: {fileID: 65937959}
     - target: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -116.74339

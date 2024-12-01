@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    [SerializeField] public int BulletTotal {  get; set; }  
     //public HealthBar healthBar;
+    [SerializeField] private GameObject ObjDrop;
     [SerializeField] private int health;
     public int Health
     {
@@ -37,14 +38,15 @@ public abstract class Character : MonoBehaviour
         }
         else return false;
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int _damage, Character _victim)
     {
-        Health -= damage;
+        Health -= _damage;
         //healthBar.UpdateHealthBar(Health);
-        IsDead();
+        if(IsDead())
+        {
+            GameObject obj = Instantiate(_victim.ObjDrop, _victim.transform);
+            BulletPlus bulletPlus = obj.GetComponent<BulletPlus>();
+        }
     }
-    public void IsHit()
-    {
-        BulletTotal += 1;
-    }
+
 }

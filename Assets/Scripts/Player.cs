@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 
 
 
-public class Player : Character, Shootable
+public class Player : Character, IShootable
 {
     [field: SerializeField] public GameObject Bullet { get; set; }
     [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
@@ -19,12 +19,12 @@ public class Player : Character, Shootable
         Init(1);
         BulletSpawnTime = 1.0f;
         BulletTimer = 2.0f;
-        BulletCount = 0;
+        BulletCount = 1;
     }
     private void Update()
     {
         BulletTimer -= Time.deltaTime;
-        if (Input.GetButtonDown("Fire1") && BulletTimer <= 0 && BulletTotal > 0)
+        if (Input.GetButtonDown("Fire1") && BulletTimer <= 0 && BulletCount > 0)
         {
             Shoot();
         }
@@ -35,12 +35,12 @@ public class Player : Character, Shootable
         BulletPng bulletPng = obj.GetComponent<BulletPng>();
         bulletPng.Init(1, this);
         BulletTimer = BulletSpawnTime;
-        BulletTotal -= 1;//BulletBar
+        BulletCount -= 1;//BulletBar
     }
     public void OnHitWith(Character character)
     {
         if (character is Enemy)
-            TakeDamage(1);
+            TakeDamage(1,character);
     }
     void OnCollisionEnter2D(Collision2D other)
     {

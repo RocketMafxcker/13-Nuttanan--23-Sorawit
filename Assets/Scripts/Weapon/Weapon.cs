@@ -19,11 +19,11 @@ public abstract class Weapon : MonoBehaviour
     }
     [SerializeField] private int BulletCount;
 
-    protected Shootable shooter;
+    protected IShootable shooter;
 
     public abstract void OnHitWith(Character character);
     public abstract void Move();
-    public void Init(int _damage, Shootable _owner)
+    public void Init(int _damage, IShootable _owner)
     {
         Damage = _damage;
         shooter = _owner;

@@ -25,7 +25,6 @@ public class BulletPng : Weapon
     public override void OnHitWith(Character character)
     {
         if (character is Enemy)
-            character.TakeDamage(this.Damage);
-            //player.IsHit();
+            character.TakeDamage(this.Damage,character);
     }
 }
