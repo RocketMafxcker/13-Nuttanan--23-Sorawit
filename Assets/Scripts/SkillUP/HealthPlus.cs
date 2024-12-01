@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class HealthPlus : MonoBehaviour
 {
-    public 
+    
 }

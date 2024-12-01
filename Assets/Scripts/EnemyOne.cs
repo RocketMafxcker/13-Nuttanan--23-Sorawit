@@ -9,8 +9,7 @@ public class EnemyOne : Enemy
 
     void Start()
     {
-        Init(100);
-
+        Init(1);
     }
 
 
@@ -39,5 +38,6 @@ public class EnemyOne : Enemy
         scale.x *= -1;
         transform.localScale = scale;
     }
+
 }
 

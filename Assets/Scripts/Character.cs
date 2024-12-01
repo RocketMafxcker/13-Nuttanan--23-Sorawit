@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
+    [SerializeField] public int BulletTotal {  get; set; }  
     //public HealthBar healthBar;
     [SerializeField] private int health;
     public int Health
@@ -41,5 +42,9 @@ public abstract class Character : MonoBehaviour
         Health -= damage;
         //healthBar.UpdateHealthBar(Health);
         IsDead();
+    }
+    public void IsHit()
+    {
+        BulletTotal += 1;
     }
 }

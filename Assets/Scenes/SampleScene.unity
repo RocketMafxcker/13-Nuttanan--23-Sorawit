@@ -332,6 +332,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1436911975}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1909374436}
     - target: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.182205
@@ -4733,6 +4741,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 690073050}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1696356730}
     - target: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.56897
@@ -4783,6 +4799,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
   m_PrefabInstance: {fileID: 879795130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &899752816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899752817}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899752817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899752816}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13049425, y: -0.20760426, z: 0.045244493}
+  m_LocalScale: {x: 0.59315497, y: 0.59315497, z: 0.59315497}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2035097806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &917874319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6076,6 +6123,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1900815005}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1887287807}
     - target: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.115372
@@ -10852,6 +10907,7 @@ GameObject:
   - component: {fileID: 2035097803}
   - component: {fileID: 2035097807}
   - component: {fileID: 2035097808}
+  - component: {fileID: 2035097809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10979,7 +11035,8 @@ Transform:
   m_LocalPosition: {x: -9.87, y: -0.62, z: 0}
   m_LocalScale: {x: 1.6859, y: 1.6859, z: 1.6859}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 899752817}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2035097807
@@ -11024,6 +11081,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2035097809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035097802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632bf79c151ba7642bb9946948018deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  anim: {fileID: 2035097804}
+  rb: {fileID: 2035097808}
+  <Bullet>k__BackingField: {fileID: 632603022133333730, guid: 47c98506d3d24be41b0e6620733a16c1, type: 3}
+  <BulletSpawnPoint>k__BackingField: {fileID: 899752817}
+  <BulletSpawnTime>k__BackingField: 0
+  <BulletTimer>k__BackingField: 0
+  <BulletCount>k__BackingField: 0
 --- !u!1 &2048568423
 GameObject:
   m_ObjectHideFlags: 0
@@ -11265,6 +11342,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1981736393}
+    - target: {fileID: 2266850642875928916, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 285642620}
     - target: {fileID: 7562858295376828497, guid: 0f575250a51a15b4584120080f5f634e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51.499733
