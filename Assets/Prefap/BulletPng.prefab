@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &632603022133333730
+--- !u!1 &2567283314255341882
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2839783668168050943}
-  - component: {fileID: 9205388226728686933}
-  - component: {fileID: 3924290670431430998}
-  - component: {fileID: -2318947286435813831}
+  - component: {fileID: 5235870964235683738}
+  - component: {fileID: 1449498734059650859}
+  - component: {fileID: 4488551923459144309}
+  - component: {fileID: 7559988982443898985}
   m_Layer: 0
   m_Name: BulletPng
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2839783668168050943
+--- !u!4 &5235870964235683738
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632603022133333730}
+  m_GameObject: {fileID: 2567283314255341882}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5021899, y: 0.4978005, z: -0.5021899, w: 0.4978005}
-  m_LocalPosition: {x: -3.9076319, y: -1.2536546, z: 0}
-  m_LocalScale: {x: 0.12163376, y: 0.12163376, z: 0.12163376}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -4.422722, y: -0.749314, z: 0}
+  m_LocalScale: {x: 0.20804, y: 0.20804, z: 0.20804}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90.503}
---- !u!212 &9205388226728686933
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!212 &1449498734059650859
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632603022133333730}
+  m_GameObject: {fileID: 2567283314255341882}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +86,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &3924290670431430998
+--- !u!114 &4488551923459144309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567283314255341882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15ffc12ac16bb049b53640568e3e9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  BulletCount: 0
+  speed: 0
+--- !u!68 &7559988982443898985
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632603022133333730}
+  m_GameObject: {fileID: 2567283314255341882}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -121,30 +136,17 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.28371364, y: -1.0092318}
-  - {x: -0.2551309, y: 0.8396821}
-  - {x: -0.12711693, y: 1.2536964}
-  - {x: 0.017309243, y: 1.4323847}
-  - {x: 0.14832476, y: 1.2709157}
-  - {x: 0.22619262, y: 1.1262513}
-  - {x: 0.26889524, y: 0.8124143}
-  - {x: 0.2992748, y: -0.9737824}
+  - {x: -0.26273036, y: 0.6326482}
+  - {x: -0.1466375, y: 1.1756291}
+  - {x: -0.07144954, y: 1.3097366}
+  - {x: 0.017735073, y: 1.38057}
+  - {x: 0.07151304, y: 1.3345182}
+  - {x: 0.17178717, y: 1.1661767}
+  - {x: 0.24449919, y: 0.87120193}
+  - {x: 0.24109611, y: 0.63570577}
+  - {x: 0.27301255, y: 0.6337117}
+  - {x: 0.26503363, y: 0.63570535}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &-2318947286435813831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632603022133333730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15ffc12ac16bb049b53640568e3e9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  BulletCount: 0
-  speed: 0

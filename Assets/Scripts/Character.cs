@@ -6,7 +6,6 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     //public HealthBar healthBar;
-    [SerializeField] private GameObject ObjDrop;
     [SerializeField] private int health;
     public int Health
     {
@@ -33,19 +32,17 @@ public abstract class Character : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(this.gameObject);
             return true;
         }
         else return false;
     }
-    public void TakeDamage(int _damage, Character _victim)
+    public void TakeDamage(int _damage, Character character)
     {
         Health -= _damage;
         //healthBar.UpdateHealthBar(Health);
-        if(IsDead())
+        if(IsDead() && character is Player)
         {
-            GameObject obj = Instantiate(_victim.ObjDrop, _victim.transform);
-            BulletPlus bulletPlus = obj.GetComponent<BulletPlus>();
+            Destroy(this.gameObject);
         }
     }
 

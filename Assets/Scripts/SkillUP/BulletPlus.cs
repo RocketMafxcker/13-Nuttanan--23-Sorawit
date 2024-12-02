@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletPlus : SkillUp
 {
-    public int AddBullet;
+    int AddBullet;
 
     private void Start()
     {
@@ -13,6 +13,6 @@ public class BulletPlus : SkillUp
 
     public override void ApplySkillUp(Player player)
     {
-       //player.SkillUp(AddBullet);
+       player.SkillUp(AddBullet);
     }
 }

@@ -6,14 +6,14 @@ public class SkillUpControl : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
             Player player = other.GetComponent<Player>();
-            SkillUp powerUp = GetComponent<SkillUp>();
+            SkillUp skillUp = GetComponent<SkillUp>();
 
-            if (powerUp != null && player != null)
+            if (skillUp != null && player != null)
             {
-                powerUp.ApplySkillUp(player);
+                skillUp.ApplySkillUp(player);
                 Destroy(gameObject);
             }
         }

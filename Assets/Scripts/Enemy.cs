@@ -22,4 +22,5 @@ public abstract class Enemy : Character
         Behavior();
     }
     public abstract void Behavior();
+    public abstract void IsDrop();
 }

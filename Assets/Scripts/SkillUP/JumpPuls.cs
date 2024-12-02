@@ -7,6 +7,6 @@ public class JumpPlus : SkillUp
     float jumpUp = 2f;
     public override void ApplySkillUp(Player player)
     {
-        //player.SkillUp(jumpUp);
+        player.SkillUp(jumpUp);
     }
 }

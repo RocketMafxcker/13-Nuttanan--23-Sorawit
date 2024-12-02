@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6550619227530537672}
   - component: {fileID: 4786821541865277729}
   - component: {fileID: 4551977287612512638}
-  - component: {fileID: 337864267332804567}
   - component: {fileID: 7748251470247175859}
   m_Layer: 0
   m_Name: JumpPlus
@@ -97,18 +96,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc810450d1545e24782d00e589354e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &337864267332804567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4666351585023839942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880ff8aea183e6c459ed45009f1daa96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &7748251470247175859
