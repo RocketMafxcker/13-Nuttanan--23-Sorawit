@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.PlayerLoop;
+using Unity.VisualScripting;
 
 public class Player : Character, IShootable
 {
@@ -11,8 +12,8 @@ public class Player : Character, IShootable
     [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
     [field: SerializeField] public float BulletSpawnTime { get; set; }
     [field: SerializeField] public float BulletTimer { get; set; }
-    [field: SerializeField] public int BulletCount { get; set; }
     [field: SerializeField] public float JumpCount { get; set; }
+    [field: SerializeField] public int BulletCount { get; set; }
     public float maxSpeed = 10f;
 	bool facingRight = true;
 
@@ -26,7 +27,7 @@ public class Player : Character, IShootable
         BulletTimer = 2.0f;
         BulletCount = 1;
         JumpCount = 3;
-        rb = GetComponent<Rigidbody2D>	();
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update()
@@ -75,7 +76,10 @@ public class Player : Character, IShootable
     public void OnHitWith(Character character)
     {
         if (character is Enemy)
-            TakeDamage(1,character);
+        {
+            Debug.Log("You Dead!");
+            Destroy(this.gameObject);
+        }
     }
     void OnCollisionEnter2D(Collision2D other)
     {

@@ -28,10 +28,11 @@ public abstract class Character : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-    public bool IsDead()
+    public bool IsDead(Character character)
     {
         if (health <= 0)
         {
+            Destroy(gameObject);
             return true;
         }
         else return false;
@@ -40,10 +41,6 @@ public abstract class Character : MonoBehaviour
     {
         Health -= _damage;
         //healthBar.UpdateHealthBar(Health);
-        if(IsDead() && character is Player)
-        {
-            Destroy(this.gameObject);
-        }
+        IsDead(character);
     }
-
 }

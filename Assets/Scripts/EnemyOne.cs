@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class EnemyOne : Enemy
 {
-    [SerializeField] private GameObject objDrop;
     [SerializeField] private Vector2 velocity;
     [SerializeField] private Transform[] movePoints;
 
     void Start()
     {
         Init(1);
+
     }
 
 
     private void FixedUpdate()
     {
         Behavior();
-        IsDrop();
     }
     public override void Behavior()
     {
@@ -40,15 +39,6 @@ public class EnemyOne : Enemy
         scale.x *= -1;
         transform.localScale = scale;
     }
-    public override void IsDrop()
-    {
-        if (IsDead())
-        {
-            Debug.Log("Drop");
-            GameObject obj = Instantiate(objDrop, this.transform);
-            BulletPlus bulletPlus = obj.GetComponent<BulletPlus>();
-            Destroy(this.gameObject);
-        }
-    }
+
 }
 

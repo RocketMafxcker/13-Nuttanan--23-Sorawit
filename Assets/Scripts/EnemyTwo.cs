@@ -6,7 +6,6 @@ using UnityEngine;
 public class EnemyTwo : Enemy, IShootable
 {
     [SerializeField] private float attackRange;
-    [SerializeField] private GameObject objDrop;
     public Player player;
 
     [field: SerializeField] public GameObject Bullet { get; set; }
@@ -44,19 +43,6 @@ public class EnemyTwo : Enemy, IShootable
         {
             Shoot();
 
-        }
-        IsDrop();
-    }
-    public override void IsDrop()
-    {
-        if (IsDead())
-        {
-            Debug.Log("Drop");
-            
-            GameObject obj = Instantiate(Bullet) as GameObject;
-            BulletPlus bulletPlus = obj.GetComponent<BulletPlus>();
-
-            Destroy(this.gameObject);
         }
     }
 }

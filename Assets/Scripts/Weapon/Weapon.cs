@@ -32,7 +32,7 @@ public abstract class Weapon : MonoBehaviour
     {
         OnHitWith(other.GetComponent<Character>());
 
-        Destroy(this.gameObject, 6f);
+        Destroy(this.gameObject, 1f);
     }
     public int GetShootDirection()
     {

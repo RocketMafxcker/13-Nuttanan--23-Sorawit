@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2919139971084847521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.13049425, y: -0.20760426, z: 0.045244493}
+  m_LocalPosition: {x: 0.41, y: -0.20760426, z: 0.045244493}
   m_LocalScale: {x: 0.59315497, y: 0.59315497, z: 0.59315497}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 58201185541749674}
   - component: {fileID: 7201765149701007201}
   - component: {fileID: 5305836989772056980}
-  - component: {fileID: 2168616206088570942}
   - component: {fileID: 4872554821668997701}
-  - component: {fileID: 265921906341812128}
+  - component: {fileID: 4761409693623524486}
+  - component: {fileID: 4709465407861235597}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -177,29 +177,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.030559063, y: -0.0025466084}
   m_Size: {x: 0.82173634, y: 1.020373}
   m_Direction: 0
---- !u!114 &2168616206088570942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4903646456904568253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09a66212a3535348b73382c7cd48469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  anim: {fileID: 7201765149701007201}
-  rb: {fileID: 4872554821668997701}
-  <Bullet>k__BackingField: {fileID: 2567283314255341882, guid: 47c98506d3d24be41b0e6620733a16c1, type: 3}
-  <BulletSpawnPoint>k__BackingField: {fileID: 7271764506383562464}
-  <BulletSpawnTime>k__BackingField: 0
-  <BulletTimer>k__BackingField: 0
-  <BulletCount>k__BackingField: 0
-  <JumpCount>k__BackingField: 0
-  maxSpeed: 10
-  jumpForce: 700
 --- !u!50 &4872554821668997701
 Rigidbody2D:
   serializedVersion: 4
@@ -227,7 +204,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &265921906341812128
+--- !u!114 &4761409693623524486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903646456904568253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09a66212a3535348b73382c7cd48469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  anim: {fileID: 7201765149701007201}
+  rb: {fileID: 4872554821668997701}
+  <Bullet>k__BackingField: {fileID: 2567283314255341882, guid: 47c98506d3d24be41b0e6620733a16c1, type: 3}
+  <BulletSpawnPoint>k__BackingField: {fileID: 7271764506383562464}
+  <BulletSpawnTime>k__BackingField: 0
+  <BulletTimer>k__BackingField: 0
+  <JumpCount>k__BackingField: 0
+  <BulletCount>k__BackingField: 0
+  maxSpeed: 10
+  jumpForce: 700
+--- !u!114 &4709465407861235597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
