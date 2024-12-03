@@ -14,6 +14,7 @@ public class Player : Character, IShootable
     [field: SerializeField] public float BulletTimer { get; set; }
     [field: SerializeField] public float JumpCount { get; set; }
     [field: SerializeField] public int BulletCount { get; set; }
+    [SerializeField] TextMeshProUGUI BulletText, JumpText;
     public float maxSpeed = 10f;
 	bool facingRight = true;
 
@@ -25,10 +26,11 @@ public class Player : Character, IShootable
         Init(1);
         BulletSpawnTime = 0.5f;
         BulletTimer = 2.0f;
-        BulletCount = 1;
-        JumpCount = 3;
-        rb = GetComponent<Rigidbody2D>();
-	}
+        BulletCount = 3;
+        JumpCount = 100000;
+        UpdateBulletText();
+        UpdateJumpText();
+    }
 	
 	void Update()
 	{
@@ -36,7 +38,8 @@ public class Player : Character, IShootable
 		{
 			rb.AddForce(new Vector2(0, jumpForce));
 			JumpCount -= 1;
-		}
+            UpdateJumpText();
+        }
 
         BulletTimer -= Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && BulletTimer <= 0 && BulletCount > 0)
@@ -71,7 +74,8 @@ public class Player : Character, IShootable
         BulletPng bulletPng = obj.GetComponent<BulletPng>();
         bulletPng.Init(1, this);
         BulletTimer = BulletSpawnTime;
-        BulletCount -= 1;//BulletBar
+        BulletCount -= 1;
+        UpdateBulletText();
     }
     public void OnHitWith(Character character)
     {
@@ -81,21 +85,38 @@ public class Player : Character, IShootable
             Destroy(this.gameObject);
         }
     }
+    public void OnHitWith(Finish character)
+    {
+        if (character is Finish)
+        {
+            Debug.Log("You Win!");
+            Destroy(this.gameObject);
+        }
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
         OnHitWith(other.gameObject.GetComponent<Character>());
+        OnHitWith(other.gameObject.GetComponent<Finish>());
     }
     //SkillUp
     public void SkillUp(int bulletPlus)
     {
         BulletCount += bulletPlus;
-        //UpdateBulletText();
+        UpdateBulletText();
     }
 
     public void SkillUp(float jumpPlus)
     {
         JumpCount += jumpPlus;
-        //UpdateJumpText();
+        UpdateJumpText();
     }
 
+    void UpdateBulletText()
+    {
+        BulletText.text = $"x{BulletCount}";
+    }
+    void UpdateJumpText()
+    {
+        JumpText.text = $"x{JumpCount}";
+    }
 }
